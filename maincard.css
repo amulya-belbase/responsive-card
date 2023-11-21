@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    font-family: Libre Baskerville;
+}
+
+/* The main body of card */
+.maindiv {
+    /* need to adjust layout if 100% width were to be used */
+    width: 1400px;
+    height: 1035px;
+    transition: ease all .5s;
+
+}
+
+/* To change layout of the collective card elements */
+.entirediv {
+    padding-top: 96px;
+    padding-left: 179px;
+    position: relative;
+    background-color: #343D33;
+}
+
+/* Because there are left and right elements, flex is used */
+.upperdiv {
+    display: flex;
+    margin-bottom: 80px;
+}
+
+.leftdiv {
+    width: 534px;
+    height: 354px;
+    margin-right: 89px;
+}
+
+/* To accommodate for background png, 
+if z-index is not set, then can't implement hover effect for button,
+applies to the whole right div part */
+.rightdiv {
+    z-index: 10;
+}
+
+.upperdes {
+    width: 417px;
+    height: 100px;
+}
+
+.rightdiv>h1 {
+    font-weight: 900;
+    size: 98px;
+    line-height: 49.5px;
+    color: white;
+    margin-top: 17px;
+}
+
+.lorempart {
+    width: 401px;
+    height: 120px;
+    font-weight: 400;
+    size: 20px;
+    line-height: 30px;
+    font-family: Roboto;
+    margin-bottom: 19px;
+    color: white;
+}
+
+.rightdiv>button {
+    margin-top: 0px;
+    width: 185px;
+    height: 56px;
+    top: 381px;
+    left: 802px;
+    color: white;
+    border: 2px solid white;
+    background-color: transparent;
+    padding: 20px, 40px, 20px, 40px;
+}
+
+.rightdiv button:hover {
+    cursor: pointer;
+}
+
+/* To implement background image, position is set to absolute and z-index set to 0 */
+.forplantaccent {
+    position: absolute;
+    z-index: 0;
+    width: 534px;
+    height: 462px;
+    top: 325px;
+    margin-left: 685px;
+}
+
+.bottomdiv {
+    padding-bottom: 96px;
+}
+
+/* This is for tablets (width < 1024px) */
+@media (max-width: 1024px) {
+    .maindiv {
+        width: 745px;
+        height: 1189px;
+        background-color: #343D33;
+    }
+
+    .entirediv {
+        padding-top: 96px;
+        padding-left: 106px;
+        position: relative;
+        transition: ease all .5s;
+    }
+
+    .upperdiv {
+        margin-bottom: 40px;
+    }
+
+    .leftdiv {
+        width: 534px;
+        height: 354px;
+        top: 96px;
+        margin-right: 0px;
+    }
+
+    .rightdiv {
+        width: 417px;
+        height: 324px;
+        top: 761px;
+        position: absolute;
+        margin-top: -20px;
+        z-index: 10;
+    }
+
+    .bottomdiv {
+        padding-bottom: 0px;
+    }
+
+    .bottomdiv>img {
+        width: 534px;
+        height: 211px;
+        top: 490px;
+    }
+
+    .forplantaccent {
+        width: 342px;
+        height: 357px;
+        position: absolute;
+        z-index: 0;
+        top: 832px;
+        margin-left: 0px;
+        left: 403px;
+    }
+
+    .forplantaccent>img {
+        width: 342px;
+        height: 357px;
+    }
+}
+
+/* This is for mobile phones (width < 575px) */
+@media (max-width: 575px) {
+    .maindiv {
+        width: 376px;
+        height: 900px;
+        background-color: #343D33;
+    }
+
+    .entirediv {
+        padding-top: 53.5px;
+        padding-left: 16px;
+        position: relative;
+        transition: ease all .5s;
+    }
+
+    .upperdiv {
+        margin-bottom: 16px;
+    }
+
+    .leftdiv {
+        width: 344px;
+        height: 235px;
+        top: 53.5px;
+        margin-right: 0px;
+    }
+
+    .leftdiv>img {
+        width: 344px;
+        height: 235px;
+    }
+
+    .bottomdiv {
+        width: 344px;
+        height: 186px;
+    }
+
+    .bottomdiv>img {
+        width: 344px;
+        height: 186px;
+    }
+
+    .rightdiv{
+        width: 344px;
+        height: 186px;
+        top: 492.5px;
+        margin-top: 20px;
+        text-align: center;
+        overflow-wrap: break-word;
+        z-index: 10; 
+    }
+
+    .rightdiv > h1, .lorempart{
+        margin-top: 0px;
+        margin-bottom: 0px;
+        width: 344px;
+    }
+    .rightdiv > p{
+        padding-top: 16px;
+        height: 120px;
+    }
+    .rightdiv>button{
+        margin-top: 45px;
+    }
+    .forplantaccent {
+        width: 195px;
+        height: 185px;
+        position: absolute;
+        z-index: 0;
+        top: 715.5px;
+        left: 181px;
+    }
+
+    .forplantaccent>img {
+        width: 195px;
+        height: 185px;
+    }
+}
